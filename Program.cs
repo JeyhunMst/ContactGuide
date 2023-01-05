@@ -33,6 +33,7 @@ ValidInput:
             MainDisplay(db);
             break;
         case "S":
+            SearchUser(db);
             MainDisplay(db);
             break;
         case "E":
@@ -172,10 +173,10 @@ EndInput:
 static void ListUsers(NorthwindContext db) 
 {
     var contacts = db.Contacts.ToList();
-    Console.WriteLine("Id   Name    Surname    Phone     Mail  ");
+    Console.WriteLine("Id------Name------Surname------Phone------Mail  ");
     foreach (var contact in contacts)
     {
-        System.Console.WriteLine($"{contact.Id,-3} {contact.Name,5} {contact.Surname,10} {contact.Phone,10} {contact.Mail,10}");
+        System.Console.WriteLine($"{contact.Id,-3}---{contact.Name,5}------{contact.Surname,10}---{contact.Phone,10}---{contact.Mail,10}");
     }
     WrongInput:
     Console.WriteLine("Update user: U");
@@ -336,4 +337,44 @@ static void UpdateContact(NorthwindContext db)
         ListUsers(db);
     }
 
+}
+
+static void SearchUser(NorthwindContext db) 
+{
+    Console.Write("Search:");
+    var input = Console.ReadLine();
+    var filteredContacts = db.Contacts.Where(contact => (contact.Name == input) || (contact.Surname==input) || (contact.Phone==input) || (contact.Mail==input)).ToList();
+    Console.WriteLine("Id------Name------Surname------Phone------Mail  ");
+    foreach (var contact in filteredContacts)
+    {
+        System.Console.WriteLine($"{contact.Id,-3}---{contact.Name,5}------{contact.Surname,10}---{contact.Phone,10}---{contact.Mail,10}");
+    }
+    WrongInput:
+    Console.WriteLine("Update user: U");
+    Console.WriteLine("Delete user: D");
+    Console.WriteLine("Return to Menu: M");
+    Console.WriteLine("Exit: E");
+    string decision= Console.ReadLine();
+    switch (decision) 
+    {
+        case "U":
+            UpdateContact(db);
+            MainDisplay(db);
+            break;
+        case "D":
+            DeleteContact(db);
+            MainDisplay(db);
+            break;
+        case "M":
+            MainDisplay(db);
+            break;
+        case "E":
+            break;
+        default:
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Please enter valid input!");
+            Console.ResetColor();
+            goto WrongInput;
+    }
+    
 }
