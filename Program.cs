@@ -343,11 +343,17 @@ static void SearchUser(NorthwindContext db)
 {
     Console.Write("Search:");
     var input = Console.ReadLine();
-    var filteredContacts = db.Contacts.Where(contact => (contact.Name == input) || (contact.Surname==input) || (contact.Phone==input) || (contact.Mail==input)).ToList();
+    var filteredContacts = db.Contacts.Where(contact => (contact.Name.Contains(input)) || (contact.Surname.Contains(input)) || (contact.Phone.Contains(input)) || (contact.Surname.Contains(input))).ToList();
     Console.WriteLine("Id------Name------Surname------Phone------Mail  ");
     foreach (var contact in filteredContacts)
     {
         System.Console.WriteLine($"{contact.Id,-3}---{contact.Name,5}------{contact.Surname,10}---{contact.Phone,10}---{contact.Mail,10}");
+    }
+    if (filteredContacts.Count<1) 
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("None of user matched your filtr!");
+        Console.ResetColor();
     }
     WrongInput:
     Console.WriteLine("Update user: U");

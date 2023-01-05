@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BMSHL/pdYlBLROyp9onQFebtlw0x4WtXvH5qbORdis+uZxIqcfyFjPmmFbav+djZxvQTTzB3BKkkvYq0C7V24Q==",
+  "dgSpecHash": "36UjutTb2uxHX+PgyU7jaQxlMLtNgnpfRF52TbcIh96cPMM4ZbWnYyDsUI86vs+Z2YEkCscCa3OBm1a/mik6ZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\FA506QM\\Desktop\\GuideToPhone\\Guider\\Guider.csproj",
+  "projectFilePath": "C:\\Users\\FA506QM\\Desktop\\MiniProjects\\C#\\GuideToPhone\\Guider\\Guider.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FA506QM\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\FA506QM\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

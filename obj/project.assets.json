@@ -3429,11 +3429,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FA506QM\\Desktop\\GuideToPhone\\Guider\\Guider.csproj",
+      "projectUniqueName": "C:\\Users\\FA506QM\\Desktop\\MiniProjects\\C#\\GuideToPhone\\Guider\\Guider.csproj",
       "projectName": "Guider",
-      "projectPath": "C:\\Users\\FA506QM\\Desktop\\GuideToPhone\\Guider\\Guider.csproj",
+      "projectPath": "C:\\Users\\FA506QM\\Desktop\\MiniProjects\\C#\\GuideToPhone\\Guider\\Guider.csproj",
       "packagesPath": "C:\\Users\\FA506QM\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FA506QM\\Desktop\\GuideToPhone\\Guider\\obj\\",
+      "outputPath": "C:\\Users\\FA506QM\\Desktop\\MiniProjects\\C#\\GuideToPhone\\Guider\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\FA506QM\\AppData\\Roaming\\NuGet\\NuGet.Config",
